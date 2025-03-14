@@ -21,7 +21,6 @@
     <script src="src/app.js" async></script>
 </head>
 <body>
-
     <!--Navbar Start-->
     <nav class="navbar" x-data>
         <a href="#home" class="navbar-logo">Agung<span>Snack</span>.</a>
@@ -29,8 +28,8 @@
         <div class="navbar-nav">
             <a href="#home">Home</a>
             <a href="#about">Tentang Kami</a>
-            <a href="#layanan">Layanan</a>
-            <a href="menu.html">Menu</a>
+            <a href="menu.html">Produk</a>
+            <a href="#accordion">Layanan</a>
             <a href="#contact">Kontak</a>
         </div>
 
@@ -97,7 +96,7 @@
                 </div>
                         <!--  Shopping Cart end -->
 
-                </nav>
+    </nav>
                          <!--Navbar End-->
 
                         <!--Hero Start -->
@@ -111,16 +110,13 @@
                                       <span class="wrap"></span>
                                     </a>
                                   </p>
-                                    <a href="#" class="cta">Beli Sekarang</a>
+                                    <a href="menu.html" class="cta">Beli Sekarang</a>
                                     <div class="box-logo">
                                         <img src="logo/halal.png" width="30" height="50" alt="halal">
                                         <img src="logo/bpom.png" width="180" height="150" alt="bpom">
                                         <img src="logo/mui.png" width="40" height="40" alt="mui">
                                     </div>
                                 </div>
-                                            <!-- <div class="box-image">
-                                            <img src="bg/bg1.png" width="450" height="425">
-                                            </div> -->
                             </div>
                 </section>
 
@@ -135,60 +131,24 @@
                         </div>
                         <div class="content">
                             <h3>Kenapa Memilih Kami?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam vitae hic ab sequi! Aperiam possimus elige</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero itaque fugiat est esse eaque. Magni sed cumque ea quibusdam modi dolore! </p>
+                            <p>Agung Snack Telah Berdiri Sedjak 2019, yg ber-alamatkan di Sukoharjo Jawa Tengah. </p>
+                            <p>Sukoharjo dikenal sebagai “Kota Jamu,” memiliki peran sentral dalam industri jamu Indonesia 
+                            Pasar Jamu Nguter, pasar jamu terbesar di Asia Tenggara, menjadi pusat perdagangan jamu dari berbagai daerah di Indonesia 
+                            Nama Sukoharjo dalam penulisan Bahasa Jawa adalah "Sukaharja" yang berarti Bumi yang selalu "Suka = Senang / Gembira" dan "Raharja = Makmur" </p>
                         </div>
                     </div>
                 </section>
                 <!--about Section End-->
-
-                <!--Layanan Section Start-->
-                <section id="layanan" class="menu">
-                    <h2>Services</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, eligendi dolorem? Quisquam nobis unde similique.</p>
-                </section>
-                <div class="row">
-                    <div class="menu-card">
-                        <img src="snack/ajisan.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Pilus Arab-</h3>
-                        <p class="menu-card-price">IDR 52k/kg</p>
-                    </div>
-                    <div class="menu-card">
-                        <img src="snack/pang.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Pang-pang-</h3>
-                        <p class="menu-card-price">IDR 38k/kg</p>
-                    </div>
-                    <div class="menu-card">
-                        <img src="snack/cendolkeju.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Cendol Keju-</h3>
-                        <p class="menu-card-price">IDR 40k/kg</p>
-                    </div>
-                    <div class="menu-card">
-                        <img src="snack/soesco.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Soes Coklat-</h3>
-                        <p class="menu-card-price">IDR 64k/kg</p>
-                    </div>
-                    <div class="menu-card">
-                        <img src="snack/marneng.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Marneng Jagung-</h3>
-                        <p class="menu-card-price">IDR 28k/kg</p>
-                    </div>
-                    <div class="menu-card">
-                     <img src="snack/marneng.jpg" alt="pilus" class="menu-card-img">
-                        <h3 class="menu-card-tittle">-Marneng Jagung-</h3>
-                        <p class="menu-card-price">IDR 28k/kg</p>
-                    </div>
-                </div>
-                <!--Layanan Section end-->
-
+                
+                
                 <!-- Produck Section -->
                 <section class="products" id="menu" x-data="products">
                     <h2><span>Produk Unggulan</span>Kami</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aspernatur sapiente eos nam non rem.</p>
-
+                    
                     <div class="row">
                         <template x-for="(item, index) in items" x-key="index">
-
+                            
                         <div class="product-card">
                         <div class="product-icons">
                             <a href="#" @click.prevent="$store.cart.add(item)">
@@ -227,12 +187,60 @@
                         </div>
                     </div>
                         </div>
-                        </template>
+                    </template>
                 </section>
                 <!-- Produck End -->
 
-                <!--Contact Section Start-->
+                <!-- Accordion Start -->
+            <div class="tronton-accordion" id="accordion">
+                <div class="container-accordion">
+                    <h1>Ada Pertayaan<span>adick-adick ?</span></h1>
+                    <div class="tab-accordion">
+                        <input type="radio" name="acc" id="acc1">
+                        <label for="acc1">
+                            <h2>01</h2>
+                            <h3>Sistem Pembayaran</h3>
+                        </label>
+                        <div class="content-accordion">
+                            <p>Saat Ini Pembayaran Hanya Bisa Dilakukan Dengan COD/(Cash Or Duel).</p>
+                        </div>
+                    </div>
+                    <div class="tab-accordion">
+                        <input type="radio" name="acc" id="acc2">
+                        <label for="acc2">
+                            <h2>02</h2>
+                            <h3>Garansi Produk</h3>
+                        </label>
+                        <div class="content-accordion">
+                            <p>Produk Kami Garansi Apabila Produk Sudah Tengik/Bau/Tidak Renyah.</p>
+                        </div>
+                    </div>
+                    <div class="tab-accordion">
+                        <input type="radio" name="acc" id="acc3">
+                        <label for="acc3">
+                            <h2>03</h2>
+                            <h3>Beli Hari Ini, Kirim Hari Ini*</h3>
+                        </label>
+                        <div class="content-accordion">
+                            <p>*syarat ketentuan berlaku ya adick-adick</p>
+                        </div>
+                    </div>
+                    <div class="tab-accordion">
+                        <input type="radio" name="acc" id="acc4">
+                        <label for="acc4">
+                            <h2>04</h2>
+                            <h3>Promo !!!</h3>
+                        </label>
+                        <div class="content-accordion">
+                            <p>Terus Pantengin Web Kami, Sapatau Ada Promo Yekaan :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Accordion end -->
+                <!-- Contact Section Start -->
                 <section id="contact" class="contact">
+                <!--Contact Section Start-->
                     <h2><span>Kontak</span>&nbsp;Kami</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, consectetur.</p>
                     <div class="row">
