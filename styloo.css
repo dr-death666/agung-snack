@@ -294,7 +294,6 @@ body {
 
 .hero-box .box {
     position: fixed;
-
 }
 
 .hero-box h4 {
@@ -789,7 +788,6 @@ footer .links {
 @media only screen and (max-width:450px) {
     html {
         font-size: 55;
-        overflow: hidden;
     }
 
     section {
@@ -798,6 +796,6 @@ footer .links {
     }
 
     .hero-box .box {
-        margin-left: -50px;
+        margin-left: -60px;
     }
 }
